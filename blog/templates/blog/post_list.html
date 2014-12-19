@@ -1,0 +1,9 @@
+
+<h2>Test View</h3>
+
+<h3>Post list</h5>
+{% for post in posts %}
+    <p>Published: {{ post.published_date }}</p>
+    <h4><a href="">{{ post.title }}</a></h3>
+    <p>{{ post.text|linebreaks }}</p>
+{% endfor %}
