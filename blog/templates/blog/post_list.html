@@ -1,9 +1,10 @@
 
-<h2>Test View</h3>
+{% extends 'blog/base.html' %}
 
-<h3>Post list</h5>
-{% for post in posts %}
-    <p>Published: {{ post.published_date }}</p>
-    <h4><a href="">{{ post.title }}</a></h3>
-    <p>{{ post.text|linebreaks }}</p>
-{% endfor %}
+{% block content %}
+    {% for post in posts %}
+        <p class="title"><a href="{% url 'blog.views.post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
+        <p class="content">{{ post.text }}</p>
+        <p class="date">Published: {{ post.published_date }}</p>
+    {% endfor %}
+{% endblock content %}
