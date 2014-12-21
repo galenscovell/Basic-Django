@@ -58,12 +58,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_db',
-        'USER': 'root',
-        'PASSWORD': 'Kisekiteki321',
-    }
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+  }
 }
 
 # Internationalization
@@ -97,10 +94,10 @@ STATIC_ROOT = 'staticfiles'
 
 DEBUG = False
 
-# try:
-#     from .local_settings import *
-# except ImportError:
- #    pass
+try:
+     from .local_settings import *
+except ImportError:
+    pass
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
