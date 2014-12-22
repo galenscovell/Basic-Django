@@ -8,19 +8,44 @@ html, body {
 #top {
     width: 100%;
     height: 100px;
-    background: #e67e22;
+    background: #F19733;
+    padding: 20px 0;
 }
 
 #top h2 {
     line-height: 100px;
     margin: 0;
-    margin-left: 40px;
-    font-size: 48px;
+    padding-left: 40px;
+    font-size: 60px;
     color: #f3f3f3;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #main {
-    padding: 40px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    float: right;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    background: #F19733;
+}
+
+li a {
+    display: block;
+    padding: 10px 16px;
+    color: #f3f3f3;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+#post_main {
+    padding: 30px;
 }
 
 .date {
@@ -39,4 +64,24 @@ html, body {
     font-size: 16px;
     padding: 20px;
     border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.post-form {
+    width: 600px;
+}
+
+#id_title,
+#id_text {
+    margin: 6px 0;
+}
+
+.post-form p input {
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+}
+
+.post-form p textarea {
+    width: 100%;
+    font-size: 18px;
 }
