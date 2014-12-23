@@ -14,9 +14,15 @@
 
         <div id="main">
             <ul>
-                <li><a href="{% url 'blog.views.post_list' %}">Index</a></li>
-                <li><a href="{% url 'post_draft_list' %}">Drafts</a></li>
-                <li><a href="{% url 'blog.views.post_new' %}">New</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'blog.views.post_list' %}">Index</a></li>
+                    <li><a href="{% url 'post_draft_list' %}">Drafts</a></li>
+                    <li><a href="{% url 'blog.views.post_new' %}">New</a></li>
+                    <li><a href="{% url 'django.contrib.auth.views.logout' %}">[{{ user.username }}] Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'blog.views.post_list' %}">Index</a></li>
+                    <li><a href="{% url 'django.contrib.auth.views.login' %}">Login</a></li>
+                {% endif %}
             </ul>
             <div id="post_main">
                 {% block content %}

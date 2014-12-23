@@ -27,13 +27,17 @@ html, body {
 
 ul {
     list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 135px;
 }
 
 li {
-    float: right;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 2px;
+    float: left;
     background: #F19733;
+    position: relative;
+    box-shadow: 0px 5px 0px #d35400;
+    padding: 5px;
 }
 
 li a {
@@ -41,11 +45,23 @@ li a {
     padding: 10px 16px;
     color: #f3f3f3;
     text-decoration: none;
-    border-radius: 2px;
+}
+
+li:hover {
+    top: 2px;
+    box-shadow: 0px 3px 1px #d35400;
 }
 
 #post_main {
-    padding: 30px;
+    padding: 40px;
+}
+
+form {
+    margin: 40px 0 0 0;
+}
+
+.post h1 a {
+    text-decoration: none;
 }
 
 .date {
