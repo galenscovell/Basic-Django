@@ -10,3 +10,7 @@ Picking up Django basics through http://tutorial.djangogirls.org/.
 * User authentication, login/logout system
 
 LIVE DEMO: [ https://fathomless-journey-6990.herokuapp.com/ ]
+
+Login credentials for testing functionality:
+* Username: guest
+* Password: login321
